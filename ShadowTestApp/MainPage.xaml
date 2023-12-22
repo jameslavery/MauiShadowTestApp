@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShadowTestApp.MainPage">
+
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            Padding="0"
+            Stroke="Transparent">
+
+            <!-- Shadow - should be picking up its style from Styles.xaml -->
+            <Border.Shadow>
+                <Shadow />
+            </Border.Shadow>
+
+            <Frame
+                BackgroundColor="BlanchedAlmond">
+                <Label
+                    Text="Label style defined in styles.xaml - so styles working in general. The Frame should have a red shadow." />
+            </Frame>
+        </Border>
+
+
+        <Label
+            BackgroundColor="White"
+            TextColor="Black"
+            Text="Standalone label with a shadow - shadow should be red if it's picking up styles.">
+            <Label.Shadow>
+                <Shadow />
+            </Label.Shadow>
+        </Label>
+    </VerticalStackLayout>
+
+</ContentPage>
